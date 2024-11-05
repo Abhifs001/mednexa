@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexa - Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .dashboard-header {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info {
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <h1>Welcome to Your Dashboard, {{ username }}!</h1>
+        <p>Here’s what you can do:</p>
+    </div>
+
+    <!-- User Info Section -->
+    <div class="container mt-5">
+        <div class="user-info">
+            <h3>Your Information</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Name: {{ username }}</li>
+                <li class="list-group-item">Email: {{ email }}</li>
+            </ul>
+        </div>
+    </div>
+ 
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white">
+        <p>&copy; 2024 MedNexa. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

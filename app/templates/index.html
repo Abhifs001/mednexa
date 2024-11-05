@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedNexa - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-section {
+            padding: 60px 0;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item {
+            border: 1px solid #007bff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <div class="hero-section bg-primary text-white text-center">
+        <h1>Welcome to MedNexa</h1>
+        <p>Your health, our priority.</p>
+        <img src="../static/images/home-page-image.jpg" alt="Health Image" class="img-fluid mt-4">
+    </div>
+
+    <!-- About Section -->
+    <div class="container mt-5">
+        <h2>About Us</h2>
+        <p>
+            At MedNexa, we are dedicated to providing comprehensive healthcare solutions that cater to the needs of patients and doctors alike.
+            Our platform connects patients with healthcare professionals, making it easier to access quality care and medical advice.
+        </p>
+        <p>
+            With a user-friendly interface and a focus on patient-centric services, MedNexa aims to revolutionize the way healthcare is delivered.
+            Join us today and take the first step towards a healthier future.
+        </p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container mt-5">
+        <h2>Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-item bg-light">
+                    <h5>Online Consultations</h5>
+                    <p>Consult with qualified doctors from the comfort of your home.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item bg-light">
+                    <h5>Health Tracking</h5>
+                    <p>Monitor your health with our easy-to-use tracking tools.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item bg-light">
+                    <h5>Appointment Scheduling</h5>
+                    <p>Book appointments with doctors at your convenience.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item bg-light">
+                    <h5>Medication Reminders</h5>
+                    <p>Never miss a dose with our medication reminders.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-item bg-light">
+                    <h5>Telemedicine Services</h5>
+                    <p>Access healthcare services remotely, anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container mt-5 bg-light p-4 rounded">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+     {% include 'footer.html' %}
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
